@@ -13,15 +13,11 @@ import {Provider} from 'react-redux';
 import {applyMiddleware, createStore} from 'redux';
 import rootReducer from './src/reducers';
 import reduxThunk from 'redux-thunk';
-import {composeWithDevTools} from 'remote-redux-devtools';
 import DropdownAlert from 'react-native-dropdownalert';
 import {DropDownHolder} from './src/util/DropDownHolder';
 
 // applyMiddleware : usado para combinar varios middlewares
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(reduxThunk)),
-);
+const store = createStore(rootReducer, applyMiddleware(reduxThunk));
 
 const App = () => {
   return (
