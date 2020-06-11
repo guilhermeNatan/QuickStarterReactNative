@@ -5,8 +5,7 @@
 
 import React from 'react';
 import {createAppContainer} from 'react-navigation';
-import {fromLeft} from 'react-navigation-transitions';
-import {createStackNavigator} from 'react-navigation-stack';
+import {createStackNavigator, TransitionPresets} from 'react-navigation-stack';
 import DrawerNavigator from './DrawerNavigator';
 import {INITAL_ROUTER} from './ScreenNames';
 
@@ -15,12 +14,14 @@ const stackNavigator = createStackNavigator(
     [INITAL_ROUTER]: {
       screen: DrawerNavigator,
       navigationOptions: {
-        header: null,
+        headerShown: false,
       },
     },
   },
   {
-    transitionConfig: () => fromLeft(600),
+    defaultNavigationOptions: {
+      ...TransitionPresets.DefaultTransition,
+    },
   },
 );
 

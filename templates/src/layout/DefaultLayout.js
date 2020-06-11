@@ -5,7 +5,6 @@
 
 import {colors} from './Colors';
 import DeviceFeatures from '../util/DeviceFeatures';
-import {StatusBar} from 'react-native';
 
 export const decorationText = {
   color: colors.primaryDarkColor,

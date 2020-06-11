@@ -4,7 +4,7 @@
  * SO bem como características do dispositivo em que está rodando
  */
 
-import {Platform, Dimensions, StatusBar, Keyboard} from 'react-native';
+import {Dimensions, Platform} from 'react-native';
 
 export default class DeviceFeatures {
   static isAndroid() {

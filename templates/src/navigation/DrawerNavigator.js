@@ -45,7 +45,7 @@ const homeStack = createStackNavigator({
   [screenNames.HOME]: {
     screen: HomeScreen,
     navigationOptions: () => ({
-      header: null,
+      headerShown: false,
     }),
   },
 });
