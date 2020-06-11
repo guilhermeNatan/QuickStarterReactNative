@@ -8,7 +8,7 @@ Templante para iniciar um projeto react-native
 1 . Configure os arquivos adroid/app/src/main/java/com/<app>/MainActivit.java 
 com no exemplo a seguir 
 
-
+```
 + import com.facebook.react.ReactActivityDelegate;
 + import com.facebook.react.ReactRootView;
 + import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
@@ -24,8 +24,10 @@ com no exemplo a seguir
 +      };
 +     }
 
+```
 1. Configure o arquivo app/build.gradle 
 
+```
 dependences { 
 
   [...]
@@ -37,7 +39,7 @@ dependences {
 
 }
 
-
+```
 
 
 
