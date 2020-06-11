@@ -4,8 +4,9 @@ Templante para iniciar um projeto react-native
 
 ## Como utilizar
 
-1. execute o comando : initproject.sh \<nomeprojeto> 
-1 . Configure os arquivos adroid/app/src/main/java/com/<app>/MainActivit.java 
+1. execute o comando : initproject.sh \<nomeprojeto\> 
+
+1 . Configure os arquivos adroid/app/src/main/java/com/\<app\>/MainActivit.java 
 com no exemplo a seguir 
 
 ```
