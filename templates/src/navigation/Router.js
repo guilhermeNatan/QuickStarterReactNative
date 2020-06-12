@@ -4,27 +4,12 @@
  */
 
 import React from 'react';
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator, TransitionPresets} from 'react-navigation-stack';
-import DrawerNavigator from './DrawerNavigator';
-import {INITAL_ROUTER} from './ScreenNames';
+import {NavigationContainer} from '@react-navigation/native';
+import DrawerNav from './DrawerNavigator';
 
-const stackNavigator = createStackNavigator(
-  {
-    [INITAL_ROUTER]: {
-      screen: DrawerNavigator,
-      navigationOptions: {
-        headerShown: false,
-      },
-    },
-  },
-  {
-    defaultNavigationOptions: {
-      ...TransitionPresets.DefaultTransition,
-    },
-  },
+const Router = () => (
+  <NavigationContainer>
+    <DrawerNav />
+  </NavigationContainer>
 );
-
-const AppContainer = createAppContainer(stackNavigator);
-
-export default AppContainer;
+export default Router;

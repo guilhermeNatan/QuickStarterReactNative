@@ -2,61 +2,23 @@
  * @copyright (C) Copyright 2020 Hotcode
  * @author guilherme.natan
  */
-
 import React from 'react';
-import {createAppContainer} from 'react-navigation';
-import {createDrawerNavigator} from 'react-navigation-drawer';
-import {createStackNavigator} from 'react-navigation-stack';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import Settings from '../screens/Settings';
 
-import * as screenNames from './ScreenNames';
-import DeviceFeatures from '../util/DeviceFeatures';
-import MenuDrawer from '../screens/ReuseComponents/Drawer/MenuDrawer';
-import HomeScreen from '../screens/Home';
+import DrawerContent from './DrawerContent/DrawerContent';
+import screens from './ScreenNames';
+import MainTabScreen from './MainTabNavigaScreen/MainTabScreen';
 
-const DrawerConfig = {
-  drawerWidth: DeviceFeatures.widthScreen(83),
-  contentComponent: ({navigation}) => {
-    return (
-      <MenuDrawer
-        navigation={navigation}
-        menuLinks={[
-          {
-            nav: screenNames.HOME_STACK,
-            descricao: 'Home',
-            icon: 'home',
-          },
-          {
-            nav: screenNames.ORDER_STACK,
-            descricao: 'Meus pedidos',
-            icon: 'shopping-bag',
-          },
-          {
-            nav: screenNames.ADDRESS_STACK,
-            descricao: 'Endereços',
-            icon: 'location-pin',
-          },
-        ]}
-      />
-    );
-  },
-};
+const Drawer = createDrawerNavigator();
 
-const homeStack = createStackNavigator({
-  [screenNames.HOME]: {
-    screen: HomeScreen,
-    navigationOptions: () => ({
-      headerShown: false,
-    }),
-  },
-});
-
-const DrawerNavigator = createDrawerNavigator(
-  {
-    [screenNames.HOME_STACK]: {
-      screen: homeStack,
-    },
-  },
-  DrawerConfig,
+const DrawerNav = () => (
+  <Drawer.Navigator
+    initialRouteName="HomeDrawer"
+    drawerContent={(props) => <DrawerContent {...props} />}>
+    <Drawer.Screen name={'HomeDrawer'} component={MainTabScreen} />
+    <Drawer.Screen name={screens.SETTINGS.id} component={Settings} />
+  </Drawer.Navigator>
 );
 
-export default createAppContainer(DrawerNavigator);
+export default DrawerNav;
