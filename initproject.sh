@@ -1,6 +1,6 @@
 #!/bin/bash
 
-react-native init $1 &&  cd $1 && yarn add lodash  react-native-gesture-handler react-native-vector-icons react-navigation react-navigation-drawer react-navigation-stack react-navigation-transitions react-redux redux redux-thunk  remote-redux-devtools yup formik react-native-dropdownalert react-native-elements  @react-native-community/masked-view  react-native-safe-area-context react-native-screens  && cp -rb ../templates/* . &&  
+react-native init $1 &&  cd $1 && yarn add lodash  react-native-gesture-handler react-native-vector-icons @react-navigation/drawer  @react-navigation/native   react-navigation-drawer react-navigation-transitions react-redux redux redux-thunk  yup formik react-native-dropdownalert react-native-paper  @react-native-community/masked-view  react-native-safe-area-context react-native-screens  firebase react-native-reanimated  @react-navigation/native @react-navigation/material-bottom-tabs  @react-navigation/stack && cp -rb ../templates/* . &&  
 
 ## app/build.gradle
 ## add this line

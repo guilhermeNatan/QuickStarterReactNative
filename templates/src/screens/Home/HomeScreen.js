@@ -7,19 +7,19 @@
  */
 
 import React, {Component} from 'react';
+import {View, Text} from 'react-native';
 
-import Header from './components/Header/Header';
 class HomeScreen extends Component {
   render() {
     return (
       <View>
-        {/*<Header title={'Teste'} navigation={this.props.navigation} />*/}
+         <Text>{`HOME`}</Text>
       </View>
     );
   }
 }
 
-import {View} from 'react-native';
+
 
 HomeScreen.propTypes = {};
 
