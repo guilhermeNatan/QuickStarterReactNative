@@ -3,3 +3,4 @@
  * @author guilherme.natan
  */
 export * from './userActions';
+export * from './aplicationActions';
